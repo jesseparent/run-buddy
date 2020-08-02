@@ -12,3 +12,5 @@ https://jesseparent.github.io/run-buddy/
 
 ## Contribution
 Made with ❤️ by Jesse Parent
+
+### ©️2019 Run Buddy, Inc 
