@@ -359,6 +359,18 @@ section {
     font-size: 17px;
 }
 
+.trainer-bio h3 {
+    font-size: 28px;
+    display: none;
+}
+  
+.trainer-bio h4 {
+    font-weight: lighter;
+    font-size: 22px;
+    margin-bottom: 15px;
+    display: none;
+}
+
 .trainer-img {
     width: 100%;
     min-height: 300px;
@@ -367,6 +379,7 @@ section {
     padding: 15px;
     align-items: flex-end;
     position: relative;
+    overflow: hidden;
 }
 
 .trainer-img::after {
@@ -377,20 +390,35 @@ section {
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.trainer:hover .trainer-img::after {
+    opacity: 1;
+}
+
+.trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
+    transform: translate(0, -200px);
 }
 
 .trainer-img h3 {
+    top: 200px;
     font-size: 28px;
     position: relative;
     z-index: 5000;
+    transition: 0.6s;
 }
 
 .trainer-img h4 {
+    top: 200px;
     font-weight: lighter;
     font-size: 22px;
     margin-bottom: 15px;
     position: relative;
     z-index: 5000;
+    transition: 0.6s;
+    transition-delay: 100ms;
 }
 
 .trainer-1 {
@@ -630,6 +658,14 @@ section {
         writing-mode: unset;
         grid-column: 1 / -1;
         grid-row: -1;
+    }
+
+    .trainer-bio h3, .trainer-bio h4 {
+        display: block;
+    }
+
+    .trainer-img h3, .trainer-img h4, .trainer-img::after {
+       display: none;
     }
 }
 
